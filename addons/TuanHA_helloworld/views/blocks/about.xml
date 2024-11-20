@@ -1,5 +1,4 @@
 <odoo>
-
     <template id="about" name="About">
         <section class="about">
             <div class="container py-lg-5 py-md-5 py-sm-4 py-3">
@@ -13,9 +12,7 @@
                     </div>
                     <div class="col-12 col-lg-7 col-md-6">
                         <h3>Who We Are</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore etc Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore etc. Lorem ipsum dolor sit amet, 
-                            consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore etc Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore etc
-                        </p>
+                        <p class="about-us" t-esc="request.env['website'].get_current_website().company_id.about_us or 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore etc'"/>
                         <button class="btn btn-primary" data-toggle="modal" data-target="#modal">BOOK NOW</button>
                     </div>
                 </div>
@@ -44,6 +41,6 @@
                 </div>
             </div>
         </section>
-    </template>
 
+    </template>
 </odoo>

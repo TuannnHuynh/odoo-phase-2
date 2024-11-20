@@ -2,4 +2,5 @@
 
 from . import lesson_odoo
 from . import course_odoo
+from . import about_us
 # from . import res_partner
