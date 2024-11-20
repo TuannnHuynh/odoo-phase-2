@@ -22,6 +22,8 @@
         'security/ir.model.access.csv',
         'views/blocks/about.xml',
         'views/blocks/modal.xml',
+        'views/customs/header.xml',
+        'views/customs/footer.xml',
         'views/snippets.xml',
         'views/setting/company/about_us.xml',
         'views/menu/course_list_template.xml',
