@@ -26,6 +26,7 @@
         'views/customs/footer.xml',
         'views/snippets.xml',
         'views/setting/company/about_us.xml',
+        'views/setting/company/social_media.xml',
         'views/menu/course_list_template.xml',
         'views/menu/menu_item_course.xml',
         'views/menu/menu_item_lesson.xml',

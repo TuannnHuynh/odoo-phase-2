@@ -39,7 +39,7 @@
                                       href="#">Contact Us</a>
                                </li>
                            </ul>
-                           <div style="" class="nav navbar-nav ml-auto">
+                           <div class="nav navbar-nav ml-auto">
                                <!--  Sign In  -->
                                <t t-call="portal.placeholder_user_sign_in">
                                    <t t-set="_item_class"
