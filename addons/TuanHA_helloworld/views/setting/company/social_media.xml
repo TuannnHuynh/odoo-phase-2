@@ -4,43 +4,39 @@
         <field name="model">res.company</field>
         <field name="inherit_id" ref="base.view_company_form"/>
         <field name="arch" type="xml">
-            <!-- Chỉnh sửa nhóm Social Media -->
             <xpath expr="//group[@name='social_media']" position="replace">
                 <group string="Social Media" name="social_media">
-                    <!-- Twitter -->
                     <group>
                         <field name="twitter_account" placeholder="Twitter Account" string="Twitter"/>
-                        <field name="twitter_icon" placeholder="Twitter Icon" string="Icon"/>
+                        <field name="twitter_icon" placeholder="Twitter link" string="Icon"/>
                     </group>
-                    <!-- Facebook -->
                     <group>
-                        <field name="facebook_account" placeholder="Facebook Account" string="Facebook" />
-                        <field name="facebook_icon" placeholder="Facebook Icon" string="Icon" />
+                        <field name="facebook_account" string="Facebook" placeholder="Facebook Account"/>
+                        <field name="facebook_icon" placeholder="Facebook link" string="Icon"/>
                     </group>
-                    <!-- GitHub -->
                     <group>
-                        <field name="github_account" placeholder="GitHub Account" string="GitHub" />
-                        <field name="github_icon" placeholder="GitHub Icon" string="Icon" />
+                        <field name="github_account" string="GitHub" placeholder="GitHub Account"/>
+                        <field name="github_icon" placeholder="GitHub link" string="Icon"/>
                     </group>
-                    <!-- LinkedIn -->
                     <group>
-                        <field name="linkedin_account" placeholder="LinkedIn Account" string="LinkedIn" />
-                        <field name="linkedin_icon" placeholder="LinkedIn Icon" string="Icon" />
+                        <field name="linkedin_account" string="LinkedIn" placeholder="LinkedIn Account"/>
+                        <field name="linkedin_icon" placeholder="LinkedIn link" string="Icon"/>
                     </group>
-                    <!-- YouTube -->
                     <group>
-                        <field name="youtube_account" placeholder="YouTube Account" string="YouTube" />
-                        <field name="youtube_icon" placeholder="YouTube Icon" string="Icon" />
+                        <field name="youtube_account" string="YouTube" placeholder="YouTube Account"/>
+                        <field name="youtube_icon" placeholder="YouTube link" string="Icon"/>
                     </group>
-                    <!-- Instagram -->
                     <group>
-                        <field name="instagram_account" placeholder="Instagram Account" string="Instagram" />
-                        <field name="instagram_icon" placeholder="Instagram Icon" string="Icon" />
+                        <field name="instagram_account" string="Instagram" placeholder="Instagram Account"/>
+                        <field name="instagram_icon" placeholder="Instagram link" string="Icon"/>
                     </group>
-                    <!-- TikTok -->
                     <group>
-                        <field name="tiktok_account" placeholder="TikTok Account" string="TikTok" />
-                        <field name="tiktok_icon" placeholder="TikTok Icon" string="Icon" />
+                        <field name="tiktok_account" string="TikTok" placeholder="TikTok Account"/>
+                        <field name="tiktok_icon" placeholder="TikTok link" string="Icon"/>
+                    </group>
+                    <group>
+                        <field name="zalo_account" string="Zalo" placeholder="Zalo Account"/>
+                        <field name="zalo_icon" placeholder="Zalo link" string="Icon"/>
                     </group>
                 </group>
             </xpath>

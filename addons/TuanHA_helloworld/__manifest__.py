@@ -33,6 +33,9 @@
         'views/menu/menu_view.xml',
     ],
     'assets': {
+        'web.assets_backend': [
+            'TuanHA_helloworld/static/src/js/social_media.js',
+        ],
         'web.assets_frontend':[
             "web/static/src/libs/fontawesome/css/font-awesome.css",
             #'TuanHA_helloworld/static/src/js/about_us.js',
