@@ -13,7 +13,7 @@ services:
       - ./addons:/mnt/extra-addons
     env_file:
       - env/odoo.env
-    command: --
+    command: ["odoo", "--dev", "xml,reload"]
   db:
     image: postgres:16
     ports:

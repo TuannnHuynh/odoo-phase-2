@@ -8,35 +8,35 @@
                 <group string="Social Media" name="social_media">
                     <group>
                         <field name="twitter_account" placeholder="Twitter Account" string="Twitter"/>
-                        <field name="twitter_icon" placeholder="Twitter link" string="Icon"/>
+                        <field name="twitter_icon" widget="image" style="width: 78px; height: 78px;"/>
                     </group>
                     <group>
-                        <field name="facebook_account" string="Facebook" placeholder="Facebook Account"/>
-                        <field name="facebook_icon" placeholder="Facebook link" string="Icon"/>
+                        <field name="facebook_account" placeholder="Facebook Account" string="Facebook"/>
+                        <field name="facebook_icon" widget="image" style="width: 78px; height: 78px;"/>
                     </group>
                     <group>
-                        <field name="github_account" string="GitHub" placeholder="GitHub Account"/>
-                        <field name="github_icon" placeholder="GitHub link" string="Icon"/>
+                        <field name="github_account" placeholder="GitHub Account" string="GitHub"/>
+                        <field name="github_icon" widget="image" style="width: 78px; height: 78px;"/>
                     </group>
                     <group>
-                        <field name="linkedin_account" string="LinkedIn" placeholder="LinkedIn Account"/>
-                        <field name="linkedin_icon" placeholder="LinkedIn link" string="Icon"/>
+                        <field name="linkedin_account" placeholder="LinkedIn Account" string="LinkedIn"/>
+                        <field name="linkedin_icon" widget="image" style="width: 78px; height: 78px;"/>
                     </group>
                     <group>
-                        <field name="youtube_account" string="YouTube" placeholder="YouTube Account"/>
-                        <field name="youtube_icon" placeholder="YouTube link" string="Icon"/>
+                        <field name="youtube_account" placeholder="YouTube Account" string="YouTube"/>
+                        <field name="youtube_icon" widget="image" style="width: 78px; height: 78px;"/>
                     </group>
                     <group>
-                        <field name="instagram_account" string="Instagram" placeholder="Instagram Account"/>
-                        <field name="instagram_icon" placeholder="Instagram link" string="Icon"/>
+                        <field name="instagram_account" placeholder="Instagram Account" string="Instagram"/>
+                        <field name="instagram_icon" widget="image" style="width: 78px; height: 78px;"/>
                     </group>
                     <group>
-                        <field name="tiktok_account" string="TikTok" placeholder="TikTok Account"/>
-                        <field name="tiktok_icon" placeholder="TikTok link" string="Icon"/>
+                        <field name="tiktok_account" placeholder="TikTok Account" string="TikTok"/>
+                        <field name="tiktok_icon" widget="image" style="width: 78px; height: 78px;"/>
                     </group>
                     <group>
-                        <field name="zalo_account" string="Zalo" placeholder="Zalo Account"/>
-                        <field name="zalo_icon" placeholder="Zalo link" string="Icon"/>
+                        <field name="zalo_account" placeholder="Zalo Account" string="Zalo"/>
+                        <field name="zalo_icon" widget="image" style="width: 78px; height: 78px;"/>
                     </group>
                 </group>
             </xpath>

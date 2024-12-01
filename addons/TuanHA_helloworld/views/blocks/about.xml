@@ -13,32 +13,26 @@
                     <div class="col-12 col-lg-7 col-md-6">
                         <h3>Who We Are</h3>
                         <p class="about-us" t-esc="request.env['website'].get_current_website().company_id.about_us or 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore etc'"/>
-                        <div class="social-media">
+                        <div class="social-media d-flex">
                             <t t-foreach="['twitter', 'facebook', 'github', 'linkedin', 'youtube', 'instagram', 'tiktok', 'zalo']" t-as="platform">
                                 <t t-set="account" t-value="request.env['website'].get_current_website().company_id['%s_account' % platform]"/>
                                 <t t-set="icon" t-value="request.env['website'].get_current_website().company_id['%s_icon' % platform] or '/TuanHA_helloworld/static/src/img/' + platform + '.png'"/>   
                                 <t t-set="base_url" t-value="'https://twitter.com/' if platform == 'twitter' else 
-                                       'https://facebook.com/' if platform == 'facebook' else 
-                                       'https://github.com/' if platform == 'github' else 
-                                       'https://linkedin.com/in/' if platform == 'linkedin' else 
-                                       'https://youtube.com/' if platform == 'youtube' else 
-                                       'https://instagram.com/' if platform == 'instagram' else 
-                                       'https://www.tiktok.com/@' if platform == 'tiktok' else 
-                                       'https://zalo.me/'"/>
+                                    'https://facebook.com/' if platform == 'facebook' else 
+                                    'https://github.com/' if platform == 'github' else 
+                                    'https://linkedin.com/in/' if platform == 'linkedin' else 
+                                    'https://youtube.com/' if platform == 'youtube' else 
+                                    'https://instagram.com/' if platform == 'instagram' else 
+                                    'https://www.tiktok.com/@' if platform == 'tiktok' else 
+                                    'https://zalo.me/'"/>
                                 <t t-if="account">
-                                    <div style="display: flex; align-items: center; margin-bottom: 10px;">
-                                        <!-- Icon -->
-                                        <img t-att-src="icon" t-att-alt="platform.capitalize()" style="width: 24px; height: 24px; margin-right: 10px;" />
-                                        
-                                        <!-- Account text -->
-                                        <a t-att-href="base_url + account" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: inherit;">
-                                            <t t-esc="account" />
-                                        </a>
-                                    </div>
+                                    <a t-att-href="base_url + account" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: inherit; margin-right: 10px;">
+                                        <img t-att-src="icon" t-att-alt="platform.capitalize()" style="width: 24px; height: 24px;" />
+                                    </a>
                                 </t>
                             </t>
                         </div>
-                        <button class="btn btn-primary" data-toggle="modal" data-target="#modal">BOOK NOW</button>
+                        <button class="btn btn-primary mt-4" data-toggle="modal" data-target="#modal">BOOK NOW</button>
                     </div>
                 </div>
                 <div class="row mt-lg-5 mt-md-4 mt-sm-3 mt-3">
