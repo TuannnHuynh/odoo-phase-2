@@ -17,16 +17,8 @@
                             <t t-foreach="['twitter', 'facebook', 'github', 'linkedin', 'youtube', 'instagram', 'tiktok', 'zalo']" t-as="platform">
                                 <t t-set="account" t-value="request.env['website'].get_current_website().company_id['%s_account' % platform]"/>
                                 <t t-set="icon" t-value="request.env['website'].get_current_website().company_id['%s_icon' % platform] or '/TuanHA_helloworld/static/src/img/' + platform + '.png'"/>   
-                                <t t-set="base_url" t-value="'https://twitter.com/' if platform == 'twitter' else 
-                                    'https://facebook.com/' if platform == 'facebook' else 
-                                    'https://github.com/' if platform == 'github' else 
-                                    'https://linkedin.com/in/' if platform == 'linkedin' else 
-                                    'https://youtube.com/' if platform == 'youtube' else 
-                                    'https://instagram.com/' if platform == 'instagram' else 
-                                    'https://www.tiktok.com/@' if platform == 'tiktok' else 
-                                    'https://zalo.me/'"/>
                                 <t t-if="account">
-                                    <a t-att-href="base_url + account" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: inherit; margin-right: 10px;">
+                                    <a t-att-href="account" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: inherit; margin-right: 10px;">
                                         <img t-att-src="icon" t-att-alt="platform.capitalize()" style="width: 24px; height: 24px;" />
                                     </a>
                                 </t>
@@ -60,6 +52,5 @@
                 </div>
             </div>
         </section>
-
     </template>
 </odoo>

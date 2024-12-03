@@ -34,15 +34,14 @@
     ],
     'assets': {
         'web.assets_backend': [
-            'TuanHA_helloworld/static/src/js/social_media.js',
-            '/TuanHA_helloworld/static/src/img/twitter.png',
-            '/TuanHA_helloworld/static/src/img/facebook.png',
-            '/TuanHA_helloworld/static/src/img/github.png',
-            '/TuanHA_helloworld/static/src/img/instagram.png',
-            '/TuanHA_helloworld/static/src/img/linkedin.png',
-            '/TuanHA_helloworld/static/src/img/tiktok.png',
-            '/TuanHA_helloworld/static/src/img/zalo.png',
-            '/TuanHA_helloworld/static/src/img/youtube.png',
+            'TuanHA_helloworld/static/src/img/twitter.png',
+            'TuanHA_helloworld/static/src/img/facebook.png',
+            'TuanHA_helloworld/static/src/img/github.png',
+            'TuanHA_helloworld/static/src/img/instagram.png',
+            'TuanHA_helloworld/static/src/img/linkedin.png',
+            'TuanHA_helloworld/static/src/img/tiktok.png',
+            'TuanHA_helloworld/static/src/img/zalo.png',
+            'TuanHA_helloworld/static/src/img/youtube.png',
         ],
         'web.assets_frontend':[
             "web/static/src/libs/fontawesome/css/font-awesome.css",

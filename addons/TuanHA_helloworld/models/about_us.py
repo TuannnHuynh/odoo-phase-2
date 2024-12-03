@@ -23,90 +23,81 @@ class ResCompany(models.Model):
     tiktok_account = fields.Char(string="TikTok Account")
     zalo_account = fields.Char(string="Zalo Account")
 
-    def _get_default_image(self):
-        image_path = modules.get_module_resource('TuanHA_helloworld', 'static/img', 'twitter.png')
-        if not os.path.exists(image_path):
-            raise ValidationError(f"File không tồn tại: {image_path}")
-        with open(image_path, 'rb') as image_file:
-            return base64.b64encode(image_file.read())
+    def _get_default_image(self, image_name):
+        """
+        Trả về dữ liệu base64 của hình ảnh mặc định từ static/src/img.
+        """
+        image_path = modules.get_module_resource('TuanHA_helloworld', 'static/src/img', image_name)
+        if image_path:
+            with open(image_path, 'rb') as f:
+                return tools.image_resize_image_big(base64.b64encode(f.read()))
+        return False
 
     # Trường Icon với ảnh mặc định
     twitter_icon = fields.Binary(
         string="Twitter Icon", 
-        default="_get_default_image",
+        default=_get_default_image,
         attachment=True
     )
     facebook_icon = fields.Binary(
         string="Facebook Icon", 
-        default="_get_default_image",
+        default=_get_default_image,
         attachment=True
     )
     github_icon = fields.Binary(
         string="GitHub Icon", 
-        default="_get_default_image",
+        default=_get_default_image,
         attachment=True
     )
     linkedin_icon = fields.Binary(
         string="LinkedIn Icon", 
-        default="_get_default_image",
+        default=_get_default_image,
         attachment=True
     )
     youtube_icon = fields.Binary(
         string="YouTube Icon", 
-        default="_get_default_image",
+        default=_get_default_image,
         attachment=True
     )
     instagram_icon = fields.Binary(
         string="Instagram Icon", 
-        default="_get_default_image",
+        default=_get_default_image,
         attachment=True
     )
     tiktok_icon = fields.Binary(
         string="TikTok Icon", 
-        default="_get_default_image",
+        default=_get_default_image,
         attachment=True
     )
     zalo_icon = fields.Binary(
         string="Zalo Icon", 
-        default="_get_default_image",
+        default=_get_default_image,
         attachment=True
     )
 
-    
+    def _get_default_twitter_icon(self):
+        return self._get_default_image('twitter.png')
 
-    # def _get_default_image(self, image_name):
-    #     """
-    #     Trả về dữ liệu base64 của hình ảnh mặc định từ static/src/img.
-    #     """
-    #     image_path = modules.get_module_resource('TuanHA_helloworld', 'static/src/img', image_name)
-    #     if image_path:
-    #         with open(image_path, 'rb') as f:
-    #             return tools.image_resize_image_big(base64.b64encode(f.read()))
-    #     return False
+    def _get_default_facebook_icon(self):
+        return self._get_default_image('facebook.png')
 
-    # def _get_default_twitter_icon(self):
-    #     return self._get_default_image('twitter.png')
+    def _get_default_github_icon(self):
+        return self._get_default_image('github.png')
 
-    # def _get_default_facebook_icon(self):
-    #     return self._get_default_image('facebook.png')
+    def _get_default_linkedin_icon(self):
+        return self._get_default_image('linkedin.png')
 
-    # def _get_default_github_icon(self):
-    #     return self._get_default_image('github.png')
+    def _get_default_youtube_icon(self):
+        return self._get_default_image('youtube.png')
 
-    # def _get_default_linkedin_icon(self):
-    #     return self._get_default_image('linkedin.png')
+    def _get_default_instagram_icon(self):
+        return self._get_default_image('instagram.png')
 
-    # def _get_default_youtube_icon(self):
-    #     return self._get_default_image('youtube.png')
+    def _get_default_tiktok_icon(self):
+        return self._get_default_image('tiktok.png')
 
-    # def _get_default_instagram_icon(self):
-    #     return self._get_default_image('instagram.png')
-
-    # def _get_default_tiktok_icon(self):
-    #     return self._get_default_image('tiktok.png')
-
-    # def _get_default_zalo_icon(self):
-    #     return self._get_default_image('zalo.png')
+    def _get_default_zalo_icon(self):
+        return self._get_default_image('zalo.png')
 
     @api.constrains(
     'twitter_account', 'facebook_account', 'github_account', 'linkedin_account',

@@ -11,3 +11,4 @@ class WebsiteAbout(http.Controller):
         return {
             'about_us': company.about_us or "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore."
         }
+    

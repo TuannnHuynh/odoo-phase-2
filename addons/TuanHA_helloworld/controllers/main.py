@@ -31,29 +31,3 @@ class MainController(http.Controller):
             ## Biến thứ 2   là biến đã query ở trên
             {"courses": records},
         )
-    
-    #######################################
-    # Hàm này chỉ demo KHÔNG CHẠY
-    # báo lỗi đó
-    @http.route('/courses/demo')
-    def get_courses(self):
-
-        # Lấy params từ get request
-        url = http.request.httprequest.url
-
-        parsed_url = urlparse(url)
-
-        params = {'hihi': parse_qs(parsed_url.query)['vnp_TxnRef'][0]}
-        try:
-            # Gọi một method từ model
-            http.request.env['payment.stack_payment'].isExistsOrder('')
-
-            # Get dữ liệu từ model
-            # Get tất cả
-            http.request.env['course.odoo'].search([])
-            # Get có điều kiện
-            http.request.env['course.odoo'].search(['id', '=', 1])
-
-            return redirect('/courses')
-        except:
-            return redirect('/courses')
