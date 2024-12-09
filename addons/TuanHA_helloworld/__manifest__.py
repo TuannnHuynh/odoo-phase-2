@@ -11,7 +11,7 @@
     'summary': 'Module xây dựng khoá học lập trình',
     'description': '',
 
-    'depends': ["base","website"],
+    'depends': ["base","website","web"],
 
     'installable': True,
     'auto_install': False,
@@ -45,7 +45,6 @@
         ],
         'web.assets_frontend':[
             "web/static/src/libs/fontawesome/css/font-awesome.css",
-            #'TuanHA_helloworld/static/src/js/about_us.js',
         ],
         'point_of_sale._assets_pos': [
             'TuanHA_helloworld/static/src/**/*'

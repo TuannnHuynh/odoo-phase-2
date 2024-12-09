@@ -1,6 +1,7 @@
 from odoo import fields, models, tools, modules, api
 from odoo.exceptions import ValidationError
 from odoo.modules.module import get_module_resource
+import logging
 import re
 import base64
 import os
@@ -134,3 +135,20 @@ class ResCompany(models.Model):
                         raise ValidationError(
                             (f"Link trong trường {field_name.replace('_', ' ')} phải bắt đầu bằng một trong các giá trị sau: {', '.join(specific_checks)}.")
                         )
+    # @api.model
+    # def write(self, vals):
+    #     """
+    #     Gửi tín hiệu cập nhật dữ liệu sau khi có thay đổi.
+    #     """
+    #     result = super(ResCompany, self).write(vals)
+    #     if 'about_us' in vals or any(key.endswith('_account') for key in vals):
+    #         self._send_update_signal()
+    #     return result
+    
+    # def _send_update_signal(self):
+    #     """
+    #     Hàm này được dùng để gửi tín hiệu cập nhật (nếu cần thiết).
+    #     Hiện tại chỉ in ra log, có thể mở rộng nếu cần.
+    #     """
+    #     _logger = logging.getLogger(__name__)
+    #     _logger.info(f"Updating About Us data for company: {self.name}")
