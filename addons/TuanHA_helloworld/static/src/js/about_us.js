@@ -20,7 +20,7 @@ let AboutUsSnippet = publicWidget.Widget.extend({
                                 ${
                                   link
                                     ? `
-                                    <a href="${link}" target="_blank" style="text-decoration: none;">
+                                    <a href="${link}" target="_blank" style="text-decoration: none; margin-right: 5px">
                                         <img src="${res.social_icons[platform]}" alt="${platform}" style="width:24px;height:24px;">
                                     </a>`
                                     : ""

@@ -1,6 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
 <odoo>
     <template id="about" name="About">
-        <section class="about">
+        <section class="about" id="about_us_custom">
             <div class="container py-lg-5 py-md-5 py-sm-4 py-3">
                 <div class="title-sub text-center mb-lg-5 mb-md-4 mb-sm-4 mb-3">
                     <h3 style="font-size: 48px;" class="title mb-2">WHAT WE DO</h3>
